@@ -719,6 +719,239 @@ curl --location 'https://log-validation.ondc.org/api/validate/fis/fis12' \
 }'
 ```
 
+### For FIS12 (Invoice Based Loans with Account Aggreagator and monitoring consent) Sample Curl Request (Local)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis/fis12' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS12",
+    "version": "2.0.0",
+    "flow": "INVOICE_BASED_LOANS_WITH_ACCOUNT_AGGREAGATOR",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "search": {},
+        "on_search":{},
+        "search": {},
+        "on_search":{},
+        "search": {},
+        "on_search":{},
+        "select": {},
+        "on_select": {},
+        "select": {},
+        "on_select": {},
+        "init":{},
+        "on_init":{},
+         "init":{},
+        "on_init":{},
+         "init":{},
+        "on_init":{},
+         "init":{},
+        "on_init":{},
+        "confirm":{},
+        "on_confirm": {},
+        "on_update": {},
+        "update": {},
+         "on_update": {},
+         "status":{},
+        "on_status":{},
+"on_status":{},
+"on_status":{}
+    }
+}'
+```
+
+
+### For FIS12 (Invoice Based Loans without Account Aggreagator and monitoring consent) Sample Curl Request (Local)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis/fis12' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS12",
+    "version": "2.0.0",
+    "flow": "INVOICE_BASED_LOANS_WITHOUT_ACCOUNT_AGGREAGATOR",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "search": {},
+        "on_search":{},
+        "search": {},
+        "on_search":{},
+        "search": {},
+        "on_search":{},
+        "select": {},
+        "on_select": {},
+        "select": {},
+        "on_select": {},
+        "init":{},
+        "on_init":{},
+         "init":{},
+        "on_init":{},
+         "init":{},
+        "on_init":{},
+         "init":{},
+        "on_init":{},
+        "confirm":{},
+        "on_confirm": {},
+         "on_status":{},
+        "status":{},
+        "on_status":{},
+        "on_status":{},
+        "on_status":{}
+    }
+}'
+```
+
+### For FIS13 Sample Curl Request (MOTOR)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS13",
+    "version": "2.0.0",
+    "flow": "MOTOR_INSURANCE",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "search_1": {},
+        "on_search_1":{},
+        "search_2": {},
+        "on_search_2":{},
+        "select_1": {},
+        "on_select_1": {},
+        "select_2": {},
+        "on_select_2": {},
+        "select_3": {},
+        "on_select_3": {},
+        "init_1": {},
+        "on_init_1": {},
+        "init_2": {},
+        "on_init_2": {},
+        "confirm": {},
+        "on_confirm": {}
+    }
+}'
+```
+
+### For FIS13 Sample Curl Request (HEALTH)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS13",
+    "version": "2.0.0",
+    "flow": "MOTOR_INSURANCE",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "search": {},
+        "on_search":{},
+        "search_1": {},
+        "on_search_1":{},
+        "select": {},
+        "on_select": {},
+        "init": {},
+        "on_init": {},
+        "init_1": {},
+        "on_init_1": {},
+        "confirm": {},
+        "on_confirm": {}
+    }
+}'
+```
+
+
+### For FIS13 Sample Curl Request (MARINE)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS13",
+    "version": "2.0.0",
+    "flow": "MARINE",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "search": {},
+        "on_search":{},
+        "select": {},
+        "on_select": {},
+        "select_1": {},
+        "on_select_1": {},
+        "init": {},
+        "on_init": {},
+        "confirm": {},
+        "on_confirm": {}
+    }
+}'
+```
+
+### For FIS13 Claim Health Insurance Request (HEALTH)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS13",
+    "version": "2.0.0",
+    "flow": "CLAIM_HEALTH_INSURANCE",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "on_confirm":{},
+       "on_update":{},
+       "on_update":{},
+       "on_status":{},
+       "on_update":{}
+    }
+}'
+```
+
+### For FIS13 Renew Health Insurance Request (HEALTH)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS13",
+    "version": "2.0.0",
+    "flow": "RENEW_HEALTH_INSURANCE",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "on_confirm":{},
+       "on_update":{},
+       "on_status":{},
+       "on_update":{}
+    }
+}'
+```
+
+### For FIS13 Cancel Marine Insurance Request (MARINE)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/fis' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:FIS13",
+    "version": "2.0.0",
+    "flow": "MARINE",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "on_confirm":{},
+       "cancel":{},
+       "on_cancel":{},
+       "on_update":{}
+    }
+}'
+```
+
 ### For FIS14 Sample Curl Requests (Local)
 
 #### For SEARCH_FULL_PULL Flow
@@ -989,7 +1222,7 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 --header 'Content-Type: application/json' \
 --data '{
-    "domain": "ONDC:TRV11",
+    "domain": "ONDC:TRV14",
     "version": "2.0.0",
     "flow": "SELLER_APP_PAGINATION",
     "bap_id": "BUYER_APP_SUBSCRIBER_ID",
@@ -1010,7 +1243,7 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 --header 'Content-Type: application/json' \
 --data '{
-    "domain": "ONDC:TRV11",
+    "domain": "ONDC:TRV14",
     "version": "2.0.0",
     "flow": "SEARCH_AND_REGISTER_FOR_INCREMENTAL_PULL",
     "bap_id": "BUYER_APP_SUBSCRIBER_ID",
@@ -1029,7 +1262,7 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 --header 'Content-Type: application/json' \
 --data '{
-    "domain": "ONDC:TRV11",
+    "domain": "ONDC:TRV14",
     "version": "2.0.0",
     "flow": "PURCHASE_JOURNEY",
     "bap_id": "BUYER_APP_SUBSCRIBER_ID",
@@ -1037,7 +1270,6 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
     "payload": {
         "select": {},
         "on_select": {},
-        "form":{},
          "select1": {},
         "on_select1": {},
         "init": {},
@@ -1056,7 +1288,7 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 --header 'Content-Type: application/json' \
 --data '{
-    "domain": "ONDC:TRV11",
+    "domain": "ONDC:TRV14",
     "version": "2.0.0",
     "flow": "TECHNICAL_CANCELLATION",
     "bap_id": "BUYER_APP_SUBSCRIBER_ID",
@@ -1078,7 +1310,7 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 --header 'Content-Type: application/json' \
 --data '{
-    "domain": "ONDC:TRV11",
+    "domain": "ONDC:TRV14",
     "version": "2.0.0",
     "flow": "USER_CANCELLATION",
     "bap_id": "BUYER_APP_SUBSCRIBER_ID",
@@ -1099,7 +1331,7 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 --header 'Content-Type: application/json' \
 --data '{
-    "domain": "ONDC:TRV11",
+    "domain": "ONDC:TRV14",
     "version": "2.0.0",
     "flow": "PARTIAL_CANCELLATION",
     "bap_id": "BUYER_APP_SUBSCRIBER_ID",
@@ -1119,7 +1351,7 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 --header 'Content-Type: application/json' \
 --data '{
-    "domain": "ONDC:TRV11",
+    "domain": "ONDC:TRV14",
     "version": "2.0.0",
     "flow": "CANCELLATION_REJECTED",
     "bap_id": "BUYER_APP_SUBSCRIBER_ID",
