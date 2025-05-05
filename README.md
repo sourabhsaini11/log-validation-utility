@@ -983,6 +983,153 @@ curl --location 'https://log-validation.ondc.org/api/validate/trv' \
 }'
 ```
 
+### For TRV14 (Seller App pagination ) Sample Curl Request (Server)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/trv' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:TRV11",
+    "version": "2.0.0",
+    "flow": "SELLER_APP_PAGINATION",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "search1": {},
+        "on_search": {},
+        "on_search1":{},
+        "on_search1":{},
+        "on_search1":{}
+
+    }
+}'
+```
+### For TRV14 (Search and Register for incremental pull ) Sample Curl Request (Server)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/trv' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:TRV11",
+    "version": "2.0.0",
+    "flow": "SEARCH_AND_REGISTER_FOR_INCREMENTAL_PULL",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "search1": {},
+        "on_search": {},
+        "on_search1":{},
+        "on_search1":{}
+    }
+}'
+```
+### For TRV14 (Purchase Journey) Sample Curl Request (Server)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/trv' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:TRV11",
+    "version": "2.0.0",
+    "flow": "PURCHASE_JOURNEY",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "select": {},
+        "on_select": {},
+        "form":{},
+         "select1": {},
+        "on_select1": {},
+        "init": {},
+        "on_init": {},
+        "confirm": {},
+        "on_confirm": {},
+        "status": {},
+        "on_status": {},
+    }
+}'
+```
+
+### For TRV14 (Technical Cancellation Flow) Sample Curl Request (Server)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/trv' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:TRV11",
+    "version": "2.0.0",
+    "flow": "TECHNICAL_CANCELLATION",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "on_confirm": {},
+        "status": {},
+        "on_status": {},
+        "cancel": {},
+        "on_cancel": {},
+        "cancel1": {},
+        "on_cancel1": {},
+    }
+}'
+```
+### For TRV14 (User Cancellation Flow) Sample Curl Request (Server)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/trv' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:TRV11",
+    "version": "2.0.0",
+    "flow": "USER_CANCELLATION",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "on_confirm": {},   
+        "cancel": {},
+        "on_cancel": {},
+        "cancel1": {},
+        "on_cancel1": {},
+    }
+}'
+```
+
+### For TRV14 (Partial Cancellation Flow) Sample Curl Request (Server)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/trv' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:TRV11",
+    "version": "2.0.0",
+    "flow": "PARTIAL_CANCELLATION",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+        "update": {},
+        "on_update": {},
+        "update1": {},
+        "on_update1": {}
+    }
+}'
+```
+
+### For TRV14 (Cancellation Rejected Flow) Sample Curl Request (Server)
+
+```shell
+curl --location 'https://log-validation.ondc.org/api/validate/trv' \
+--header 'Content-Type: application/json' \
+--data '{
+    "domain": "ONDC:TRV11",
+    "version": "2.0.0",
+    "flow": "CANCELLATION_REJECTED",
+    "bap_id": "BUYER_APP_SUBSCRIBER_ID",
+    "bpp_id": "SELLER_APP_SUBSCRIBER_ID",
+    "payload": {
+         "cancel": {},
+        "on_cancel": {},
+    }
+}'
+```
 
 ### For RSF V2 Sample Curl Request (Local)
 
